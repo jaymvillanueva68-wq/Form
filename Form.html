@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Modern Fitness Tracker</title>
+    <style>
+        body {
+            /* Using standard color names */
+            background-color: DarkSlateGrey;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            color: White;
+        }
+
+        .main-card {
+            background-color: MidnightBlue;
+            width: 750px;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0px 10px 30px Black;
+        }
+
+        .header-box {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            border-bottom: 2px solid DeepSkyBlue;
+            padding-bottom: 25px;
+            margin-bottom: 30px;
+        }
+
+        .header-box img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 50%; /* Circular image */
+            border: 4px solid DeepSkyBlue;
+        }
+
+        .header-box p {
+            line-height: 1.6;
+            font-size: 1.1rem;
+            color: AliceBlue;
+        }
+
+        .grid-container {
+            display: flex;
+            gap: 40px;
+        }
+
+        .column {
+            flex: 1;
+        }
+
+        h3 {
+            color: DeepSkyBlue;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            font-size: 1rem;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-size: 0.9rem;
+            color: LightSteelBlue;
+        }
+
+        input[type="text"], 
+        input[type="email"] {
+            width: 100%;
+            padding: 12px;
+            margin-top: 8px;
+            background-color: GhostWhite;
+            border: none;
+            border-radius: 8px;
+            box-sizing: border-box; /* Ensures padding doesn't affect width */
+        }
+
+        .choice-group {
+            background-color: DarkSlateBlue;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+
+        .choice-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        .choice-row label {
+            margin: 0 0 0 10px;
+            color: White;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 40px;
+            padding: 15px;
+            background-color: DeepSkyBlue;
+            color: MidnightBlue;
+            font-weight: bold;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: LightCyan;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+
+<div class="main-card">
+
+    <div class="header-box">
+        <img src="https://via.placeholder.com/150/00BFFF/000000?text=FIT" alt="Fitness Logo">
+        <div>
+            <h2 style="margin: 0; color: DeepSkyBlue;">Elevate Your Life</h2>
+            <p>
+                Welcome back! Track your daily milestones and turn your hard work 
+                into lasting health. Let's capture your stats to begin today's session.
+            </p>
+        </div>
+    </div>
+
+    <form>
+        <div class="grid-container">
+
+            <div class="column">
+                <h3>Personal Profile</h3>
+                
+                <label for="user">Full Name</label>
+                <input type="text" id="user" placeholder="Jay-m Villanueva" required>
+
+                <label for="loc">Home Address</label>
+                <input type="text" id="loc" placeholder="Bacoor Cavite" required>
+
+                <label for="mail">Email Address</label>
+                <input type="email" id="mail" placeholder="jaymvillanueva68@gmail.com" required>
+
+                <label for="phone">Phone Number</label>
+                <input type="text" id="phone" placeholder="+63 000 000 0000" required>
+            </div>
+
+            <div class="column">
+                <h3>Activity & Identity</h3>
+
+                <label>Identify As</label>
+                <div class="choice-group">
+                    <div class="choice-row">
+                        <input type="radio" name="gender" id="m">
+                        <label for="m">Male</label>
+                    </div>
+                    <div class="choice-row">
+                        <input type="radio" name="gender" id="f">
+                        <label for="f">Female</label>
+                    </div>
+                </div>
+
+                <label>Preferred Workouts</label>
+                <div class="choice-group">
+                    <div class="choice-row">
+                        <input type="checkbox" id="run">
+                        <label for="run">Running</label>
+                    </div>
+                    <div class="choice-row">
+                        <input type="checkbox" id="cyc">
+                        <label for="cyc">Cycling</label>
+                    </div>
+                    <div class="choice-row">
+                        <input type="checkbox" id="read">
+                        <label for="read">Reading</label>
+                    </div>
+                    <div class="choice-row">
+                        <input type="checkbox" id="walk">
+                        <label for="walk">Walking</label>
+                    </div>
+                    <div class="choice-row">
+                        <input type="checkbox" id="gym">
+                        <label for="gym">Exercising</label>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <button type="submit">START MY JOURNEY</button>
+    </form>
+
+</div>
+
+</body>
+</html>
